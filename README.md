@@ -25,25 +25,13 @@ provide a modern web interface with alarm functionality.
 
 ### Quick start
 
-1. Run the setup script (creates Python virtual environment and installs
-   dependencies). If `npm` is installed it will also install frontend packages:
+Run the helper script `start.py` to set everything up and launch both the
+backend and frontend in one step. It creates a virtual environment, installs all
+dependencies and then starts the servers. Press `Ctrl+C` to stop them.
 
-   ```bash
-   ./setup.sh
-   ```
-
-2. Start the backend API:
-
-   ```bash
-   .venv/bin/uvicorn backend.main:app --reload
-   ```
-
-3. In another terminal start the React development server:
-
-   ```bash
-   cd frontend
-   npm start
-   ```
+```bash
+python start.py
+```
 
 The React app will connect to the backend WebSocket at `ws://localhost:8000/ws`
 and display incoming trade messages.
